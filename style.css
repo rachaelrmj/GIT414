@@ -1,0 +1,40 @@
+/* Global */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header, nav, main, footer { padding: 1rem; }
+
+h1, nav {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 5px;
+    border-right: 1.5px black solid;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* Medium screens */
+@media only screen and (min-width: 600px) {
+ nav ul { display: flex; gap: 1rem; }
+ main {background: yellow;}
+}
+
+/* Large screens */
+@media only screen and (min-width: 900px) {
+ body { max-width: 900px; margin: auto; }
+ h1 { font-size: 3rem; }
+  main {background: blue;}
+}
+
+/* Extra large */
+@media only screen and (min-width: 1200px) {
+  main {background: red;}
+}
