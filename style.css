@@ -1,40 +1,178 @@
 /* Global */
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-header, nav, main, footer { padding: 1rem; }
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+    background-image: url("asu_wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header, nav, main, footer { 
+    padding: 1rem; 
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#asu_logo {
+    width: 220px;
+    height: auto;
+}
+
+#asu_logo_black {
+    display: none;
+}
+
+#asu_logo_yellow {
+    display: none;
+}
 
 h1, nav {
     text-align: center;
 }
 
+h1 {
+    text-shadow: 4px 4px #000000;
+}
+
+nav {
+    width: 75%;
+    margin: auto;
+    box-shadow: 0 10px 20px #000000
+}
+
 nav ul {
+    gap: 1rem;
     display: flex;
     justify-content: center;
+    padding: 0
 }
 
 nav li {
     list-style: none;
-    padding: 0 5px;
     border-right: 1.5px black solid;
+    padding-right: 1rem;
+}
+
+nav li:last-child {
+    border-right: none;
 }
 
 nav a {
+    font-size: 18px;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bolder;
+}
+
+nav a:active, nav a:hover, nav a:focus {
+    color: #000000;
+}
+
+#me {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+}
+
+main {
+    font-weight: bold;
+}
+
+footer {
+    font-weight: bold;
 }
 
 /* Medium screens */
 @media only screen and (min-width: 600px) {
- nav ul { display: flex; gap: 1rem; }
- main {background: yellow;}
+    #asu_logo {
+    display: none;
+    }
+
+    #asu_logo_black {
+        display: none;
+    }
+
+    #asu_logo_yellow {
+        display: block;
+        width: 220px;
+        margin: auto;
+    }
+
+    nav ul { 
+        display: flex; 
+        gap: 1rem;
+    }
+
+    nav li {
+        padding-right: 1rem;
+    }
+
+    nav a {
+        font-size: 25px;
+    }
+
+    main {
+        width: 40%;
+        margin: auto;
+        background: rgba(255, 198, 39, 0.5);
+        color: #ffffff;
+    }
 }
 
 /* Large screens */
 @media only screen and (min-width: 900px) {
- body { max-width: 900px; margin: auto; }
- h1 { font-size: 3rem; }
-  main {background: blue;}
+    #asu_logo {
+    display: none;
+    }
+
+    #asu_logo_black {
+        display: block;
+        width: 220px;
+        margin: auto;
+    }
+
+    #asu_logo_yellow {
+        display: none;
+    }
+
+    body { 
+        max-width: 900px; 
+        margin: auto; 
+    }
+
+     h1 { 
+        font-size: 3rem; 
+        text-shadow: 5px 7px #000000;
+    }
+
+    main {
+        margin: auto;
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+    }
 }
 
 /* Extra large */
 @media only screen and (min-width: 1200px) {
-  main {background: red;}
+    #asu_logo {
+        display: block;
+        width: 220px;
+        margin: auto;
+    }
+
+    #asu_logo_black {
+        display: none;
+    }
+
+    #asu_logo_yellow {
+        display: none;
+    }
+
+    main {
+        margin: auto;
+        background: rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+    }
 }
